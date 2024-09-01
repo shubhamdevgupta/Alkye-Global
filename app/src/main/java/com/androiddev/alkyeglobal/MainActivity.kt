@@ -49,6 +49,6 @@ class MainActivity : AppCompatActivity(),ItemAdapterSecond.OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-        TODO("Not yet implemented")
+
     }
 }

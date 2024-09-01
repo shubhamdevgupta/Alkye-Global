@@ -20,7 +20,6 @@ class ItemAdapterSecond(
             itemView.findViewById(R.id.date) // Ensure this ID matches your layout
 
         init {
-            // Set the click listener on the entire item view
             itemView.setOnClickListener {
                 onItemClickListener.onItemClick(adapterPosition)
             }

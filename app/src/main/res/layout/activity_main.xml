@@ -21,6 +21,7 @@
             android:fontFamily="@font/strawfordregular"
             android:text="Recent Articles"
             android:textSize="28sp"
+            android:layout_marginStart="8dp"
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
