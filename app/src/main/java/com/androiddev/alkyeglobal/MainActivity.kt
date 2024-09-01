@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androiddev.alkyeglobal.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),ItemAdapterSecond.OnItemClickListener {
 
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         binding.recylerview.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
+        binding.secondRecyler.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         val items = listOf(
             ItemModel(
                 R.drawable.car_icon,
@@ -39,7 +41,14 @@ class MainActivity : AppCompatActivity() {
             ),
         )
 
+
         val adapter = ItemAdapter(items)
+        val secondAdapter = ItemAdapterSecond(items,this)
         binding.recylerview.adapter = adapter
+        binding.secondRecyler.adapter = secondAdapter
+    }
+
+    override fun onItemClick(position: Int) {
+        TODO("Not yet implemented")
     }
 }
