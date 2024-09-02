@@ -11,9 +11,9 @@ class ItemAdapter(private val items: List<ItemModel>) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val carIcon: ImageView = itemView.findViewById(R.id.car_icon)
-        val dotsText: TextView = itemView.findViewById(R.id.dots_text)
-        val dateText: TextView = itemView.findViewById(R.id.date) // Ensure this ID matches your layout
+        val carIcon: ImageView = itemView.findViewById(R.id.carImage)
+        val dotsText: TextView = itemView.findViewById(R.id.categoryText)
+        val dateText: TextView = itemView.findViewById(R.id.dateText)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

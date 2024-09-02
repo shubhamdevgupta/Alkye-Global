@@ -14,10 +14,10 @@ class ItemAdapterSecond(
     RecyclerView.Adapter<ItemAdapterSecond.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val carIcon: ImageView = itemView.findViewById(R.id.car_icon)
-        val dotsText: TextView = itemView.findViewById(R.id.dots_text)
+        val carIcon: ImageView = itemView.findViewById(R.id.carImageView)
+        val dotsText: TextView = itemView.findViewById(R.id.categoryTextView)
         val dateText: TextView =
-            itemView.findViewById(R.id.date) // Ensure this ID matches your layout
+            itemView.findViewById(R.id.dateTextView) // Ensure this ID matches your layout
 
         init {
             itemView.setOnClickListener {

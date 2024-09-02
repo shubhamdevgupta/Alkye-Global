@@ -1,105 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:background="#FFFFFF">
+    android:backgroundTint="#F5F5F5"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- ShapeableImageView taking up 30% of the card width -->
-
-        <!-- ConstraintLayout for the text views taking up the remaining 70% -->
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/car_icon"
-            android:layout_width="138dp"
-            android:layout_height="0dp"
+        <!-- Car Image -->
+        <ImageView
+            android:id="@+id/carImageView"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:scaleType="fitXY"
             android:src="@drawable/car_icon"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@+id/contentLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Content Layout -->
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentLayout"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="12dp"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/car_icon"
+            app:layout_constraintStart_toEndOf="@id/carImageView"
             app:layout_constraintTop_toTopOf="parent">
 
-
+            <!-- Video Icon -->
             <ImageView
-                android:id="@+id/star_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_star"
-                app:layout_constraintBottom_toTopOf="@id/dots"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.023"
+                android:id="@+id/videoIconImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_play"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <ImageView
-                android:id="@+id/dots"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_dot"
-                android:layout_marginStart="4dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.023"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.375" />
-
+            <!-- Category Text -->
             <TextView
-                android:id="@+id/dots_text"
+                android:id="@+id/categoryTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="technology"
-                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:text="● technology"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/videoIconImageView" />
+
+            <!-- Title Text -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Step Into Tomorrow:"
+                android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/dots"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.099"
-                app:layout_constraintStart_toEndOf="@id/dots"
-                app:layout_constraintTop_toTopOf="@id/dots"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <TextView
-                android:id="@+id/content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/content"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@id/date"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dots" />
+                app:layout_constraintTop_toBottomOf="@id/categoryTextView" />
 
+            <!-- Subtitle Text -->
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/subtitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:layout_marginBottom="18dp"
-                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:text="Exploring Spatial Computing’s Impact On Industries And The Metaverse!"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+            <!-- Date Text -->
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="26 Feb 2024"
-                android:textColor="@color/black"
+                android:textColor="#9E9E9E"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/content" />
+                app:layout_constraintTop_toBottomOf="@id/subtitleTextView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>
