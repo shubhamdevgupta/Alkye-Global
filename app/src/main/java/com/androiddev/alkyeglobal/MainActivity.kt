@@ -1,5 +1,6 @@
 package com.androiddev.alkyeglobal
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,6 +50,6 @@ class MainActivity : AppCompatActivity(),ItemAdapterSecond.OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-
+        startActivity(Intent(this,DetailsActivity::class.java))
     }
 }
