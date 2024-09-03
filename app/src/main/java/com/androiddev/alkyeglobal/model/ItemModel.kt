@@ -1,4 +1,4 @@
-package com.androiddev.alkyeglobal
+package com.androiddev.alkyeglobal.model
 
 data class ItemModel(
     val imageResId: Int,

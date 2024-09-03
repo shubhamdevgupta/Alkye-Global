@@ -1,8 +1,11 @@
-package com.androiddev.alkyeglobal
+package com.androiddev.alkyeglobal.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.androiddev.alkyeglobal.model.ItemModel
+import com.androiddev.alkyeglobal.R
+import com.androiddev.alkyeglobal.adapter.ItemAdapter
 import com.androiddev.alkyeglobal.databinding.ActivityDetailsBinding
 
 class DetailsActivity : AppCompatActivity() {
@@ -12,8 +15,6 @@ class DetailsActivity : AppCompatActivity() {
         binding=ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.recylerview.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         val items = listOf(
             ItemModel(
@@ -38,8 +39,9 @@ class DetailsActivity : AppCompatActivity() {
             ),
         )
 
-        val adapter = ItemAdapter(items)
-        binding.recylerview.adapter = adapter
+        binding.recylerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val thirdadapter = ItemAdapter(items)
+        binding.recylerview.adapter= thirdadapter
 
     }
 }

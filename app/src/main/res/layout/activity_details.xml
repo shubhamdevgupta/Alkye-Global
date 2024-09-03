@@ -12,7 +12,7 @@
         android:layout_margin="4dp"
         android:background="#F9F9F9"
         android:padding="16dp"
-        tools:context=".DetailsActivity">
+        tools:context=".activity.DetailsActivity">
 
         <ImageButton
             android:id="@+id/btnBack"
@@ -82,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Type/n Article"
+                android:text="Type \nArticle"
                 android:textAlignment="textStart"
                 android:textColor="#999"
                 android:textSize="14sp" />
@@ -335,6 +335,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:scrollbars="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/recentTextview" />
 
 

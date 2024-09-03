@@ -1,4 +1,4 @@
-package com.androiddev.alkyeglobal
+package com.androiddev.alkyeglobal.activity
 
 import android.content.Intent
 import android.os.Bundle

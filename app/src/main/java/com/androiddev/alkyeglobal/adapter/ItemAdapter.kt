@@ -1,4 +1,4 @@
-package com.androiddev.alkyeglobal
+package com.androiddev.alkyeglobal.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.androiddev.alkyeglobal.model.ItemModel
+import com.androiddev.alkyeglobal.R
 
 class ItemAdapter(private val items: List<ItemModel>) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
