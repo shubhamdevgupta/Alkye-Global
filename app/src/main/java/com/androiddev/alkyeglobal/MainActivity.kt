@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity(),ItemAdapterSecond.OnItemClickListener {
 
         binding.recylerview.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.thirdRecyler.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         binding.secondRecyler.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -44,9 +46,11 @@ class MainActivity : AppCompatActivity(),ItemAdapterSecond.OnItemClickListener {
 
 
         val adapter = ItemAdapter(items)
+        val thirdadapter = ItemAdapter(items)
         val secondAdapter = ItemAdapterSecond(items,this)
         binding.recylerview.adapter = adapter
         binding.secondRecyler.adapter = secondAdapter
+        binding.thirdRecyler.adapter= thirdadapter
     }
 
     override fun onItemClick(position: Int) {
