@@ -31,17 +31,17 @@ class MainFragment : Fragment(), ItemAdapterSecond.OnItemClickListener {
                 "26 Feb 2024"
             ),
             ItemModel(
-                R.drawable.car_icon,
+                R.drawable.ic_carone,
                 "Pharmacy",
                 "28 Feb 2024"
             ),
             ItemModel(
-                R.drawable.car_icon,
+                R.drawable.ic_cartwo,
                 "Infrastructure",
                 "26 Feb 2024"
             ),
             ItemModel(
-                R.drawable.car_icon,
+                R.drawable.ic_carthree,
                 "Manufacture",
                 "26 Feb 2024"
             ),
