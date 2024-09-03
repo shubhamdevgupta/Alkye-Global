@@ -12,4 +12,6 @@ Executives consistently emphasise process simulation and digital twins as the mo
 Spatial operations are in their infancy, with ongoing advancements in enabling technologies. Imagine a scenario where robust satellite networks seamlessly integrate with IoT sensors in a distant factory, constantly processing real-time data on output and performance. As technology progresses, a forthcoming era of digital twins emerges, featuring photorealistic simulations grounded in physics and empowered by AI. Moreover, these simulations are intricately linked to company ecosystems, exemplified by platforms like BMW’s Omniverse. This transformative evolution is set to influence various facets of enterprise operations, ranging from space planning and design to overall operational processes.
 New: The spatial web is under construction
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

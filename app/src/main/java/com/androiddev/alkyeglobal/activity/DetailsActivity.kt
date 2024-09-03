@@ -15,7 +15,6 @@ class DetailsActivity : AppCompatActivity() {
         binding=ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val items = listOf(
             ItemModel(
                 R.drawable.car_icon,
